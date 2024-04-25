@@ -1,9 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
+import Rot from "../Rot.jsx/Rot";
+import ErrorPage from "../components/ErrorPage";
+import Home from "../pages/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world! <button className="btn btn-primary">click me</button> </div>,
+    element:<Rot></Rot>,
+    errorElement:<ErrorPage></ErrorPage>,
+    children:[
+      {
+        path:"/",
+        element:<Home></Home>
+      }
+    ]
   },
 ]);
 
