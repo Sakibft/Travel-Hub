@@ -2,7 +2,7 @@
 
 const MyList = () => {
   return (
-    <div>
+    <div  className="container mx-auto">
       <h1>My list</h1>
     </div>
   );

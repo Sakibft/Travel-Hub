@@ -8,7 +8,7 @@ const Home = () => {
 const user = useLoaderData()
 console.log(user);
   return (
-    <div>
+    <div className="container mx-auto">
    {
     user.map(item => 
     <>

@@ -9,6 +9,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateAddToSpot from "../Private/PrivateAddToSpot";
 import MyListPrivate from "../Private/MyListPrivate";
+import ViewDetails from "../pages/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       {
         path: "/allTouristsSpot",
         element: <AllTouristsSport></AllTouristsSport>,
+        loader:() => fetch('https://b9a10-server.vercel.app/spots')
       },
       {
         path: "/addTouristsSpot",
@@ -49,6 +51,10 @@ const router = createBrowserRouter([
         path: "/register",
         element: <Register></Register>,
       },
+      {
+        path:"/view/:id",
+      element:<ViewDetails></ViewDetails>
+      }
     ],
   },
 ]);
