@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/firebase.config";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
 
 const gprovider = new GoogleAuthProvider();
@@ -29,6 +29,10 @@ const gitHubLogin = () => {
   return signInWithPopup(auth, githubprovider)
 
 }
+// logout 
+const logOut = () => {
+  return signOut(auth)
+ }
 
 useEffect(()=>{
   const unSubsCribe = onAuthStateChanged(auth,currentUser => {
@@ -53,7 +57,8 @@ useEffect(()=>{
     createUser,
     loginUser,
     googleLogin,
-    gitHubLogin
+    gitHubLogin,
+    logOut
   }
   return (
     <UserContext.Provider value={info}>
