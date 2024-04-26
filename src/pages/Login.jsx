@@ -59,7 +59,20 @@ if(gError){
     console.log('clicked google');
   }
 //   git hub
+if(gitSuccess){
+    toast.success('Login successfully with Github!')
+}
+if(gitError){
+    toast.error(gitError)
+}
 const handleGithub = () => {
+    gitHubLogin()
+    .then((result)=> {
+        console.log(result.user);
+    })
+    .catch((error)=> {
+        console.error(error)
+    })
     console.log('clicked github ');
 }
   return (

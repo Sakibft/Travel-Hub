@@ -54,6 +54,7 @@ useEffect(()=>{
 
   const info = {
     user,
+    loading,
     createUser,
     loginUser,
     googleLogin,
