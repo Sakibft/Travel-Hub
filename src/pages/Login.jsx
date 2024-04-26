@@ -1,17 +1,41 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../ContextComponent/AuthContextComponent";
+import toast, { Toaster } from "react-hot-toast";
 
  
 
 const Login = () => { 
+  const {loginUser}=useContext(UserContext);
+ const [error,setError]=useState('');
+ const [success,setSuccess]=useState('');
+ if(success){
+    toast.success('Login successfully!')
+ }
+ if(error){
+    toast.error(error)  
+ }
   const handleLogin = e => {
+    setError('')
+    setSuccess('')
     e.preventDefault()
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
+    loginUser(email,password)
+    .then((result) => {
+      setSuccess(result)
+      console.log(result.user);
+    })
+    .catch((error) => {
+      setError(error.message)
+      console.error(error)
+    })
     console.log(email,password);
   }
   return (
     <div>
+      <div><Toaster/></div>
        <div className="w-full max-w-md p-8 space-y-3 rounded-xl border bg-white   font-sans mx-auto">
         <h1 className="text-3xl font-bold text-center text-indigo-600">Login</h1>
         {/* Input fields and the form started */}

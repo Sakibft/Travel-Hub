@@ -1,17 +1,54 @@
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { UserContext } from "../ContextComponent/AuthContextComponent";
+import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
+  const {createUser}=useContext(UserContext)
+  const [error,setError]=useState("");
+  const [success,setSuccess]=useState("");
+  if(success){
+    toast.success('Register completed successfully!')
+  }
+  if(error){
+    // alert(error)
+    toast.error(error)
+  }
   const handleRegister = e => {
+    setError("")
+    setSuccess("")
     e.preventDefault()
     const form = e.target;
    const name = form.name.value;
    const email = form.email.value;
    const password = form.password.value;
    const photo = form.photo.value;
+   if (password.length < 6) {
+    setError("Password should be at least 6 characters");
+    return;
+  }
+  if (!/[A-Z]/.test(password)) {
+    setError("Must have one uppercase letter  ");
+    return;
+  }
+  if (!/[a-z]/.test(password)) {
+    setError("Must have one lowercase letter");
+    return;
+  }
+   createUser(email,password,name,photo)
+   .then(result => {
+    setSuccess(result)
+    console.log(result.user);
+   })
+   .catch((error) => {
+     setError(error.message)
+     console.error(error);
+   })
     console.log(name,email,password,photo);
   }
   return (
     <div>
+      <div><Toaster/></div>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl border bg-white   font-sans mx-auto">
         <h1 className="text-3xl font-bold text-center text-indigo-600">
           Register

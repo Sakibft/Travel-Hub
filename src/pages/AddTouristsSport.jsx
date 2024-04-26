@@ -1,6 +1,7 @@
  
 
 const AddTouristsSport = () => {
+ 
   return (
     <div>
       <h1>Add tourists Spot</h1>
