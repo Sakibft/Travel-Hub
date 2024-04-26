@@ -39,7 +39,7 @@ const Register = () => {
    createUser(email,password,name,photo)
    .then(result => {
     const user = {name,email,photo}
-    fetch('http://localhost:5000/users', {
+    fetch('https://b9a10-server.vercel.app/users', {
       method:"POST",
       headers:{
         "content-type":"application/json"

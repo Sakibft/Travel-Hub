@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('http://localhost:5000/users')
+        loader:()=>fetch('https://b9a10-server.vercel.app/users')
       },
       {
         path: "/allTouristsSpot",
