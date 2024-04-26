@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../ContextComponent/AuthContextComponent";
 import toast, { Toaster } from "react-hot-toast";
+import { refFromURL } from "firebase/database";
 
 const Register = () => {
   const {createUser}=useContext(UserContext)
@@ -37,8 +38,23 @@ const Register = () => {
   }
    createUser(email,password,name,photo)
    .then(result => {
-    setSuccess(result)
-    console.log(result.user);
+    const user = {name,email,photo}
+    fetch('http://localhost:5000/users', {
+      method:"POST",
+      headers:{
+        "content-type":"application/json"
+      },
+      body:JSON.stringify(user)
+    })
+    .then(res => res.json())
+    .then(data => {
+     if(data){
+      setSuccess(result)
+      console.log(data);
+     }
+    })
+
+  
    })
    .catch((error) => {
      setError(error.message)

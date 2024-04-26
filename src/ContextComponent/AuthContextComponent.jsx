@@ -1,8 +1,10 @@
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/firebase.config";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
 
- 
+const gprovider = new GoogleAuthProvider();
+const githubprovider = new GithubAuthProvider();
 export const UserContext = createContext(null);
 const AuthContextComponent = ({children}) => {
  const [user,setUser]=useState(null)
@@ -16,6 +18,15 @@ const AuthContextComponent = ({children}) => {
 //  Login
 const loginUser = (email,password) => {
   return signInWithEmailAndPassword(auth, email, password)
+
+}
+// login with google
+const googleLogin = () => {
+return signInWithPopup(auth,gprovider)
+}
+// git hub login
+const gitHubLogin = () => {
+  return signInWithPopup(auth, githubprovider)
 
 }
 
@@ -40,7 +51,9 @@ useEffect(()=>{
   const info = {
     user,
     createUser,
-    loginUser
+    loginUser,
+    googleLogin,
+    gitHubLogin
   }
   return (
     <UserContext.Provider value={info}>
