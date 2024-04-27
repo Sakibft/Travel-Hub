@@ -45,11 +45,11 @@ const AddTouristsSport = () => {
     })
   };
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto mb-20 mt-5 border-2 border-pink-300 rounded-md">
        <div><Toaster/></div>
-      <h1>Add tourists Spot</h1>
+ 
       <div className="max-w-full mx-auto">
-        <form onSubmit={handleAddSpot}>
+        <form onSubmit={handleAddSpot} className="p-5">
           <div className="flex flex-col sm:flex-row justify-between space-x-0 sm:space-x-4">
             {/* left */}
             <div className="w-full sm:w-1/2 ">
@@ -58,7 +58,7 @@ const AddTouristsSport = () => {
                   User Name
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                  className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Enter your name"
                   type="text"
                   name="name"
@@ -67,7 +67,7 @@ const AddTouristsSport = () => {
                   User Email
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Enter your email"
                   type="email"
                   name="email"
@@ -76,7 +76,7 @@ const AddTouristsSport = () => {
                   Country_Name
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                 className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Enter country name"
                   type="text"
                   name="country"
@@ -85,7 +85,7 @@ const AddTouristsSport = () => {
                   Tourists_spot_name
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                  className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Enter country name"
                   type="text"
                   name="spot"
@@ -94,7 +94,7 @@ const AddTouristsSport = () => {
                   Location
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Enter location"
                   type="text"
                   name="location"
@@ -109,7 +109,7 @@ const AddTouristsSport = () => {
                   Seasonality
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                 className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Available Quantity"
                   type="text"
                   name="season"
@@ -118,7 +118,7 @@ const AddTouristsSport = () => {
                   Travel_time
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                 className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Travel time"
                   type="text"
                   name="time"
@@ -127,7 +127,7 @@ const AddTouristsSport = () => {
                   TotalVisitorsPerYear
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                 className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Enter coffee details"
                   type="text"
                   name="visitor"
@@ -136,7 +136,7 @@ const AddTouristsSport = () => {
                   Sort description
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Enter coffee details"
                   type="text"
                   name="description"
@@ -145,7 +145,7 @@ const AddTouristsSport = () => {
                   Average_cost
                 </label>
                 <input
-                  className="flex h-10 w-full rounded-md border px-3 py-2 text-sm focus:outline-none"
+                className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Average_cost"
                   type="text"
                   name="cost"
@@ -159,14 +159,14 @@ const AddTouristsSport = () => {
               Photo
             </label>
             <input
-              className="w-full px-3 py-2 rounded-lg focus:outline-none "
+            className="w-full px-4 py-3 rounded-md   border border-pink-400    "
               type="text"
               placeholder="Enter photo URL"
               name="photo"
             />
 
             <input
-              className="w-full px-3 py-2  mt-2 btn rancho text-xl border border-[#331A15]"
+              className="w-full px-3 py-2  mt-2 btn rancho text-xl border   bg-pink-400 text-white"
               type="submit"
               value="Add "
             />

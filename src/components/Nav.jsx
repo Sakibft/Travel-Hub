@@ -36,7 +36,7 @@ const Nav = () => {
         to="/"
         className={({ isActive }) =>
           isActive
-            ? "text-black  lg:px-2 py-1 border-2 border-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            ? "lg:px-2 py-1 border-2 text-pink-400 border-pink-400 rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
       >
@@ -45,10 +45,10 @@ const Nav = () => {
       <NavLink
         to="/allTouristsSpot"
         className={({ isActive }) =>
-          isActive
-            ? "text-black  lg:px-2 py-1 border-2 border-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
-            : "font-semibold text-2xl  "
-        }
+        isActive
+          ? "lg:px-2 py-1 border-2 text-pink-400 border-pink-400 rounded-md p-3  font-semibold text-2xl  "
+          : "font-semibold text-2xl  "
+      }
       >
         All Tourists Spot
       </NavLink>
@@ -56,7 +56,7 @@ const Nav = () => {
         to="/addTouristsSpot"
         className={({ isActive }) =>
           isActive
-            ? "text-black  lg:px-2 py-1 border-2 border-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            ? "lg:px-2 py-1 border-2 text-pink-400 border-pink-400 rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
       >
@@ -65,10 +65,10 @@ const Nav = () => {
       <NavLink
         to="/myList"
         className={({ isActive }) =>
-          isActive
-            ? "text-black  lg:px-2 py-1 border-2 border-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
-            : "font-semibold text-2xl  "
-        }
+        isActive
+          ? "lg:px-2 py-1 border-2 text-pink-400 border-pink-400 rounded-md p-3  font-semibold text-2xl  "
+          : "font-semibold text-2xl  "
+      }
       >
         My List
       </NavLink>
@@ -118,7 +118,9 @@ const Nav = () => {
             </ul>
           </div>
           <img src={sdlk} className="w-16" alt="" />
-          <a className="  text-2xl font-bold ">Tour Hub</a>
+          <a className="  text-2xl font-bold ">Tour   
+          <span className="text-pink-400"> Hub </span>
+          </a>
         </div>
         <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">{LItem}</ul>
@@ -130,7 +132,7 @@ const Nav = () => {
                 <div className="avatar">
                   <div className="w-12">
                     <img
-                      className="rounded-full"
+                      className="rounded-full border-2 border-pink-400"
                       src={user?.photoURL}
                     />
                   </div>
@@ -140,18 +142,18 @@ const Nav = () => {
                 tabIndex={0}
                 className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52 ml=40"
               >
-                <li className="border border-blue-400">
+                <li className="border border-pink-400 rounded-md bg-white text-black  hover:bg-pink-400 hover:text-white">
                   <a>{user?.displayName}</a>
                 </li>
                 <li>
-                  <button className="border border-blue-400 w-20 " onClick={handleLogout}>Logout</button>
+                  <button className="border hover:bg-pink-400 w-20 hover:text-white text-black " onClick={handleLogout}>Logout</button>
                 </li>
               </ul>
             </div>
           ) : (
             <div className="space-x-4">
-              <NavLink to="/register" className="btn bg-blue-400 text-white">Register</NavLink>
-              <NavLink to="/login"  className="btn bg-blue-400 text-white">Login</NavLink>
+              <NavLink to="/register" className="btn bg-pink-400 text-white">Register</NavLink>
+              <NavLink to="/login"  className="btn bg-pink-400 text-white">Login</NavLink>
             </div>
           )}
         </div>

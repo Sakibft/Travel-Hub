@@ -67,9 +67,9 @@ const Register = () => {
   return (
     <div>
       <div><Toaster/></div>
-      <div className="w-full max-w-md p-8 space-y-3 rounded-xl border bg-white   font-sans mx-auto">
-        <h1 className="text-3xl font-bold text-center text-indigo-600">
-          Register
+      <div className="w-full max-w-md p-8 space-y-3 rounded-xl border bg-white border-pink-300  font-sans mx-auto mt-4 mb-10">
+        <h1 className="text-3xl font-bold text-center  ">
+          Regis<span className="text-pink-400">Ter</span>
         </h1>
         {/* Input fields and the form started */}
         <form  onSubmit={handleRegister} className="space-y-6">
@@ -81,7 +81,7 @@ const Register = () => {
               type="text"
               name="name"
               placeholder="Username"
-              className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring  "
+              className="w-full px-4 py-3 rounded-md   border border-pink-400    "
             />
           </div>
           <div className="space-y-2 text-sm">
@@ -92,7 +92,7 @@ const Register = () => {
               type="email"
               name="email"
               placeholder="Email"
-              className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring  "
+              className="w-full px-4 py-3 rounded-md   border border-pink-400    "
             />
           </div>
           <div className="space-y-2 text-sm">
@@ -103,7 +103,7 @@ const Register = () => {
               type="password"
               name="password"
               placeholder="Password"
-              className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring  "
+              className="w-full px-4 py-3 rounded-md   border border-pink-400    "
             />
           </div>
           <div className="space-y-2 text-sm">
@@ -114,19 +114,12 @@ const Register = () => {
               type="text"
               name="photo"
               placeholder="Phot URL"
-              className="w-full px-4 py-3 rounded-md border border-indigo-300 focus:outline-none focus:ring  "
+              className="w-full px-4 py-3 rounded-md   border border-pink-400    "
             />
           </div>
           {/* Sign in Button */}
-          <button className="text-lg rounded-xl relative p-[10px] block w-full bg-indigo-600 text-white border-y-4 duration-500 overflow-hidden focus:border-indigo-500 z-50 group">
-            Log In
-            <span className="absolute opacity-0 group-hover:opacity-100 duration-100 group-hover:duration-1000 ease-out flex justify-center inset-0 items-center z-10 text-white">
-              Let&apos;s go
-            </span>
-            <span className="bg-indigo-800 absolute inset-0 -translate-y-full group-hover:translate-y-0 group-hover:duration-1000"></span>
-            <span className="bg-indigo-800 absolute inset-0 translate-y-full group-hover:translate-y-0 group-hover:duration-1000"></span>
-            <span className="bg-indigo-800 absolute inset-0 translate-x-full group-hover:translate-x-0 group-hover:delay-300 delay-100 duration-1000"></span>
-            <span className="bg-indigo-800 absolute inset-0 -translate-x-full group-hover:translate-x-0 group-hover:delay-300 delay-100 duration-1000"></span>
+          <button className="text-lg rounded-xl relative p-[10px] block w-full bg-pink-400 text-white     overflow-hidden btn ">
+         Register
           </button>
         </form>
         <div className="flex items-center pt-4 space-x-2">
@@ -175,7 +168,7 @@ const Register = () => {
         </div>
         <p className="text-sm text-center gap-2 flex justify-center sm:px-6 ">
           Do you have an account?
-          <Link to='/login' className="underline hover:text-indigo-600">
+          <Link to='/login' className="underline hover:text-pink-600">
             Sign in
           </Link>
         </p>

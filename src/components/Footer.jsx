@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
      
         </div>
-        <aside className="bg-[#8EA7E9] py-5 text-center text-sm">
+        <aside className="bg-pink-400 py-5 text-center text-sm">
           <p className="text-white text-lg">&copy; 2024 Sale ~ home. All Rights Reserved.</p>
         </aside>
       </footer>
