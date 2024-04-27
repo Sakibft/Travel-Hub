@@ -68,9 +68,11 @@ if(gitError){
 const handleGithub = () => {
     gitHubLogin()
     .then((result)=> {
+        setGitSuccess(result)
         console.log(result.user);
     })
     .catch((error)=> {
+        setGitError(error.message)
         console.error(error)
     })
     console.log('clicked github ');

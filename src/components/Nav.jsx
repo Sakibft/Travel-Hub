@@ -1,36 +1,85 @@
 import { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Navigate } from "react-router-dom";
 import { UserContext } from "../ContextComponent/AuthContextComponent";
-
+import { Toaster } from "react-hot-toast";
+import { Tooltip } from "react-tooltip";
+ import sdlk from "../../src/assets/dlk.avif"
 const Nav = () => {
   const { user, logOut } = useContext(UserContext);
-  const [success,setSuccess]=useState();
-  const [error,setError]=useState();
-  if(success){
-    <Link to='/'></Link>
+  const [success, setSuccess] = useState();
+  const [error, setError] = useState();
+  if (success) {
+    // toast.success('Logout successfully');
+    <Link to="/"></Link>;
   }
+
   const handleLogout = () => {
+    console.log(user);
     logOut()
-    .then((result) => {
-      setSuccess(result);
-      console.log(result);
-    })
-    .catch((error) => {
-      setError(error.message);
-    });
-    console.log('logged out ');
-  }
-  console.log(user);
+      .then((result) => {
+        // setSuccess(result);
+        // console.log(result);
+        if (result) {
+          <Navigate to="/"></Navigate>;
+        }
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+    console.log("logged out ");
+  };
+  // console.log(user);
   const LItem = (
-    <div className="space-x-4">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/allTouristsSpot">All Tourists Spot</NavLink>
-      <NavLink to="/addTouristsSpot">Add Tourists Spot</NavLink>
-      <NavLink to="/myList">My List</NavLink>
+    <div className="space-x-6">
+ 
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive
+            ? "text-black  lg:px-2 py-1 border-2 border-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            : "font-semibold text-2xl  "
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/allTouristsSpot"
+        className={({ isActive }) =>
+          isActive
+            ? "text-black  lg:px-2 py-1 border-2 border-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            : "font-semibold text-2xl  "
+        }
+      >
+        All Tourists Spot
+      </NavLink>
+      <NavLink
+        to="/addTouristsSpot"
+        className={({ isActive }) =>
+          isActive
+            ? "text-black  lg:px-2 py-1 border-2 border-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            : "font-semibold text-2xl  "
+        }
+      >
+        Add Tourists Spot
+      </NavLink>
+      <NavLink
+        to="/myList"
+        className={({ isActive }) =>
+          isActive
+            ? "text-black  lg:px-2 py-1 border-2 border-[#8EA7FF] rounded-md p-3  font-semibold text-2xl  "
+            : "font-semibold text-2xl  "
+        }
+      >
+        My List
+      </NavLink>
     </div>
   );
   return (
-    <div  className="container mx-auto"> 
+    <div className="container mx-auto">
+        
+      <div>
+        <Toaster />
+      </div>
       <div className="navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -52,10 +101,10 @@ const Nav = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-40"
+              className="menu menu-sm dropdown-content mt-3 z-[10]  shadow bg-base-100 rounded-box w-40"
             >
               <li>
-                <NavLink to="/">Home</NavLink>{" "}
+                <NavLink to="/">Home</NavLink> 
               </li>
               <li>
                 <NavLink to="/allTouristsSpot">All Tourists Spot</NavLink>
@@ -68,40 +117,41 @@ const Nav = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <img src={sdlk} className="w-16" alt="" />
+          <a className="  text-2xl font-bold ">Tour Hub</a>
         </div>
         <div className="navbar-center hidden md:flex">
           <ul className="menu menu-horizontal px-1">{LItem}</ul>
         </div>
         <div className="navbar-end space-x-4">
           {user ? (
-            <div className="dropdown dropdown-hover">
+            <div className="dropdown dropdown-hover ">
               <div tabIndex={10}>
                 <div className="avatar">
                   <div className="w-12">
                     <img
                       className="rounded-full"
-                      src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                      src={user?.photoURL}
                     />
                   </div>
                 </div>
               </div>
               <ul
                 tabIndex={0}
-                className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52"
+                className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52 ml=40"
               >
-                <li>
-                  <a>Name</a>
+                <li className="border border-blue-400">
+                  <a>{user?.displayName}</a>
                 </li>
                 <li>
-                  <button onClick={handleLogout}>Logout</button>
+                  <button className="border border-blue-400 w-20 " onClick={handleLogout}>Logout</button>
                 </li>
               </ul>
             </div>
           ) : (
             <div className="space-x-4">
-              <NavLink to="/register">Register</NavLink>
-              <NavLink to="/login">Login</NavLink>
+              <NavLink to="/register" className="btn bg-blue-400 text-white">Register</NavLink>
+              <NavLink to="/login"  className="btn bg-blue-400 text-white">Login</NavLink>
             </div>
           )}
         </div>

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
  
 
 const SingleSpot = ({item}) => {
+  const {photo,spot,cost,visitor,time,season}=item;
+  console.log(photo);
   console.log(item);
   return (
     <div>

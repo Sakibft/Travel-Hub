@@ -5,7 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { refFromURL } from "firebase/database";
 
 const Register = () => {
-  const {createUser}=useContext(UserContext)
+  const {createUser, updateUserProfile }=useContext(UserContext)
   const [error,setError]=useState("");
   const [success,setSuccess]=useState("");
   if(success){
@@ -37,8 +37,10 @@ const Register = () => {
     return;
   }
    createUser(email,password,name,photo)
+  updateUserProfile(name,photo)
    .then(result => {
     const user = {name,email,photo}
+
     fetch('https://b9a10-server.vercel.app/users', {
       method:"POST",
       headers:{
@@ -54,13 +56,13 @@ const Register = () => {
      }
     })
 
-  
+  console.log(result);
    })
    .catch((error) => {
      setError(error.message)
      console.error(error);
    })
-    console.log(name,email,password,photo);
+    // console.log(name,email,password,photo);
   }
   return (
     <div>

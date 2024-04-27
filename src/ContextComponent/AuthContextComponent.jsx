@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import auth from "../Firebase/firebase.config";
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth/cordova";
+import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider } from "firebase/auth";
 
 const gprovider = new GoogleAuthProvider();
 const githubprovider = new GithubAuthProvider();
@@ -27,8 +27,14 @@ return signInWithPopup(auth,gprovider)
 // git hub login
 const gitHubLogin = () => {
   return signInWithPopup(auth, githubprovider)
-
 }
+// Updata
+const updateUserProfile = (name,photo) => {
+  return  updateProfile(auth.currentUser, {
+      displayName:name, 
+      photoURL: photo
+    }) 
+   }
 // logout 
 const logOut = () => {
   return signOut(auth)
@@ -59,6 +65,7 @@ useEffect(()=>{
     loginUser,
     googleLogin,
     gitHubLogin,
+    updateUserProfile,
     logOut
   }
   return (

@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('https://b9a10-server.vercel.app/users')
+  
       },
       {
         path: "/allTouristsSpot",
