@@ -37,8 +37,8 @@ const Register = () => {
     return;
   }
    createUser(email,password,name,photo)
-  updateUserProfile(name,photo)
    .then(result => {
+     updateUserProfile(name,photo)
     const user = {name,email,photo}
 
     fetch('https://b9a10-server.vercel.app/users', {

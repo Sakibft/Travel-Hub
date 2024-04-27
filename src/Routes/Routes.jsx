@@ -42,6 +42,8 @@ const router = createBrowserRouter([
             <MyList></MyList>,
           </MyListPrivate>
         ),
+        loader:() => fetch('https://b9a10-server.vercel.app/spots')
+        
       },
       {
         path: "/login",

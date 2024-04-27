@@ -9,7 +9,7 @@ const SingleSpot = ({item}) => {
   return (
     <div>
     <div className="card   w-96 lg:w-full bg-base-100 shadow-xl">
-  <figure><img src={photo} alt="Shoes" /></figure>
+  <figure><img className="h-60 rounded-md" src={photo} alt="Shoes" /></figure>
   <div className="p-3">
     
     <h2 className="card-title "> Tourists Spot Name : {spot}</h2>

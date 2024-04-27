@@ -6,6 +6,7 @@ import { Tooltip } from "react-tooltip";
  import sdlk from "../../src/assets/dlk.avif"
 const Nav = () => {
   const { user, logOut } = useContext(UserContext);
+  // console.log(user?.email);
   const [success, setSuccess] = useState();
   const [error, setError] = useState();
   if (success) {
@@ -146,7 +147,7 @@ const Nav = () => {
                   <a>{user?.displayName}</a>
                 </li>
                 <li>
-                  <button className="border hover:bg-pink-400 w-20 hover:text-white text-black " onClick={handleLogout}>Logout</button>
+                  <button className="border hover:bg-pink-400 w-20 hover:text-white text-black border-pink-400 " onClick={handleLogout}>Logout</button>
                 </li>
               </ul>
             </div>
