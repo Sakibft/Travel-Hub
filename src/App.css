@@ -17,17 +17,13 @@
 }
 
  .slide2 {
-  background-image: url(./assets/img1.jpg);
+  background-image: url(./assets/img1.avif);
  }
- .slide5 {
-  background-image: url(./assets/img2.jpg);
- }
+  
  .slide1 {
   background-image: url(./assets/img3.jpg);
  }
  .slide3 {
-  background-image:url(./assets/img4.jpg);
+  background-image:url(./assets/img2.jpg);
  }
- .slide4 {
-  background-image: url(./assets/img5.jpg);
- }
+  
