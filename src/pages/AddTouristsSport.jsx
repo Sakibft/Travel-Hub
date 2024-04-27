@@ -1,12 +1,18 @@
+import { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { UserContext } from "../ContextComponent/AuthContextComponent";
 
 const AddTouristsSport = () => {
+  const {user} = useContext(UserContext)
+ const {displayName,email}=user;
+ console.log(user);
   const handleAddSpot= (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
     const country = form.country.value;
+    console.log(country);
     const spot = form.spot.value;
     const location = form.location.value;
     const cost = form.cost.value;
@@ -55,13 +61,14 @@ const AddTouristsSport = () => {
             <div className="w-full sm:w-1/2 ">
               <div className="flex flex-col space-y-1 mb-4">
                 <label htmlFor="username" className="block ">
-                  User Name
+                User Name
                 </label>
                 <input
                   className="w-full px-4 py-3 rounded-md   border border-pink-400    "
                   placeholder="Enter your name"
                   type="text"
                   name="name"
+                  value={displayName}
                 />
                 <label htmlFor="username" className="block ">
                   User Email
@@ -71,6 +78,7 @@ const AddTouristsSport = () => {
                   placeholder="Enter your email"
                   type="email"
                   name="email"
+                  value={email}
                 />
                 <label htmlFor="username" className="block ">
                   Country_Name

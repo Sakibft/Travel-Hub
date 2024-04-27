@@ -8,6 +8,7 @@ const AllTouristsSport = () => {
  console.log(spots);
   return (
     <div className="grid lg:grid-cols-4 justify-around gap-5 container mx-auto">
+      
    
      {
       spots.map((item)=> <SingleSpot key={item._id} item={item}></SingleSpot>)

@@ -53,7 +53,9 @@ const router = createBrowserRouter([
       },
       {
         path:"/view/:id",
-      element:<ViewDetails></ViewDetails>
+      element:<ViewDetails></ViewDetails>,
+      loader: ({params})=>fetch(`https://b9a10-server.vercel.app/spots/${params.id}`)
+      
       }
     ],
   },
