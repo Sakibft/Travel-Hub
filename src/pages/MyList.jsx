@@ -1,6 +1,7 @@
-import { Link, useLoaderData } from "react-router-dom";
+import {  Link, useLoaderData } from "react-router-dom";
 import { UserContext } from "../ContextComponent/AuthContextComponent";
 import { useContext, useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 const MyList = () => {
   const { user } = useContext(UserContext);
@@ -16,7 +17,36 @@ const MyList = () => {
     }
   }, [allUsers, user]);
   console.log(singleusr);
-
+  const handleDelete = _id => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/spots/${_id}`,{
+          method:"DELETE",
+        })
+        .then(res => res.json())
+        .then(data => {
+          if(data.deletedCount>0){
+              Swal.fire({
+          title: "Deleted!",
+          text: "Your file has been deleted.",
+          icon: "success"
+        });
+        const remaining = singleusr.filter(usr => usr._id !== _id) 
+        setsingluser(remaining)
+        console.log(data);
+          }
+        })
+      }
+    });
+  }
   return (
       <div className="container mx-auto grid lg:grid-cols-4 md:grid-cols-2 gap-5 justify-around">
         {singleusr &&
@@ -42,11 +72,14 @@ const MyList = () => {
                     <p> Travel Time : {item.time}</p>
                     <p>Seasonality : {item.season}</p>
                     <div className="card-actions justify-end">
-                      <Link to={`/view/${item._id}`}>
-                        <button className="btn bg-pink-400 border hover:border-pink-400 hover:bg-white hover:text-pink-400 text-white">
-                          View Details
+                       <Link to={`/update/${item._id}`}>
+                       <button className="btn bg-pink-400 border hover:border-pink-400 hover:bg-white hover:text-pink-400 text-white">
+                           Update
                         </button>
-                      </Link>
+                       </Link>
+                        <button onClick={()=> handleDelete(item._id)} className="btn bg-pink-400 border hover:border-pink-400 hover:bg-white hover:text-pink-400 text-white">
+                           delate
+                        </button>
                     </div>
                   </div>
                 </div>
@@ -54,7 +87,6 @@ const MyList = () => {
             </div>
           ))}
       </div>
-    
   );
 };
 
