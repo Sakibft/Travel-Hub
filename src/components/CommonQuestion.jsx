@@ -4,7 +4,7 @@ const CommonQuestion = () => {
     <div>
       {/* title */}
       <div className="flex justify-center flex-col items-center">
-        <h1 className="text-center mt-16   text-2xl font-semibold">
+        <h1 className="text-center mt-16   text-4xl font-semibold">
          
           <span className="text-pink-400">C</span>ommon{" "}
           <span className="text-pink-400">Q</span>uestion
