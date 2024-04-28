@@ -7,11 +7,11 @@ const ViewDetailsPrivate = ({children}) => {
   const {loading,user}= useContext(UserContext)
   if (loading) {
     return (
-      <div>
-        <span className="loading loading-dots loading-xs"></span>
-        <span className="loading loading-dots loading-sm"></span>
-        <span className="loading loading-dots loading-md"></span>
-        <span className="loading loading-dots loading-lg"></span>
+      <div className="container mx-auto flex justify-center items-center   ">
+        <span className="loading loading-dots loading-xs text-pink-400"></span>
+        <span className="loading loading-dots loading-sm text-pink-400"></span>
+        <span className="loading loading-dots loading-md text-pink-400"></span>
+        <span className="loading loading-dots loading-lg text-pink-400"></span>
       </div>
     );
   }

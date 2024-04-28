@@ -34,7 +34,7 @@ const handleUpdate = e => {
   console.log(UpUser);
 
 
-  fetch(`http://localhost:5000/spots/${_id}`,{
+  fetch(`https://b9a10-server.vercel.app/spots/${_id}`,{
     method:"PUT",
     headers:{
       "content-type":"application/json"
