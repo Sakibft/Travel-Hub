@@ -39,23 +39,7 @@ const Register = () => {
    createUser(email,password,name,photo)
    .then(result => {
      updateUserProfile(name,photo)
-    const user = {name,email,photo}
-
-    fetch('https://b9a10-server.vercel.app/users', {
-      method:"POST",
-      headers:{
-        "content-type":"application/json"
-      },
-      body:JSON.stringify(user)
-    })
-    .then(res => res.json())
-    .then(data => {
-     if(data){
-      setSuccess(result)
-      console.log(data);
-     }
-    })
-
+    setSuccess(result)
   console.log(result);
    })
    .catch((error) => {
