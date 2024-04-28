@@ -1,82 +1,76 @@
 import { HiOutlineMail } from "react-icons/hi";
 import { LiaPhoneSolid } from "react-icons/lia";
 import { SlLocationPin } from "react-icons/sl";
-
+import lsd from "../assets/tour.svg"
+import { FaFacebook } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import { IoLogoYoutube } from "react-icons/io";
+import { SiInstagram, SiTelegram } from "react-icons/si";
+import { AiFillTwitterCircle } from "react-icons/ai";
  
 
 const Footer = () => {
   return (
     <div>
-         <div>
+         <div className="mt-20">
       {/* <hr className="border border-[#8EA7E9]" /> */}
-      <footer className="flex flex-col text-black">
-        <div className="flex flex-col items-center justify-around gap-5 bg-gray-100  md:flex-row md:gap-0">
+      <footer className="flex flex-col text-black ">
+        <div className="flex flex-col items-center justify-around   bg-gray-100  md:flex-row md:gap-0 p-4">
           <aside className="flex items-center justify-center gap-3 text-xl mt-3 ">
+            <div>
+
+           <h1 className="text-2xl font-semibold">Tour <span className="text-pink-400">Hub</span></h1>
+           <div className=" border border-pink-400  ">
            
-             
+
+           </div>
+            </div>
+           
+             <img className="w-40" src={lsd} alt="" />
            
           </aside>
+           
           <div>
-            <h1 className="text-xl font-semibold  ">Our Services</h1>
-            <ul className="flex flex-col  ">
-            <li className="flex text-[#8EA7E9] underline">
-                <a href="">Customized Solutions</a>
-              </li>
-            <li className="flex text-[#8EA7E9] underline">
-                <a href="">Property Management</a>
-              </li>
-             
-             
-              <li className="flex text-[#8EA7E9] underline">
-                <a href="">Market Analysis</a>
-              </li>
+            <h1 className="text-xl font-semibold "> Social media links</h1>
+            <div className=" border border-pink-400 w-40">
+           
 
-         
-              <li className="flex text-[#8EA7E9] underline">
-                <a href="">Investment Analysis</a>
-              </li>
-         
-            </ul>
+            </div>
+             
+            
+         <div className="flex  justify-around text-3xl mt-2">
+         <FaFacebook className="cursor-pointer"/>
+         <SiInstagram className="cursor-pointer" />
+           
+            <IoLogoYoutube className="cursor-pointer" />
+         </div>
+         <div className="flex justify-center gap-3 text-3xl mt-3">
+         <AiFillTwitterCircle className="text-[33px] text-pink-400 cursor-pointer" />
+            <SiTelegram className="text-pink-400 cursor-pointer" />
+            </div>
           </div>
           <nav className="text-lg">
-            <ul className=" flex h-full items-center justify-center gap-5 ">
-              <li className="cursor-pointer">
-                <a className="flex gap-1">
-               <h1 className="text-[20px] font-semibold">Follow Us ~</h1>
-               
+               <h1 className="text-[20px] font-semibold">Contact Now ~</h1>
+               <div className=" border border-pink-400 w-40">
+           
 
-                </a>
-              </li>
-              <li className="cursor-pointer">
-                <a>
-               
-
-                </a>
-              </li>
-              <li className="cursor-pointer">
-                  
-              </li>
-              <li className="cursor-pointer">
-                
-              </li>
-            </ul>
+           </div>
             <div className="mt-2">
             <h1 className="flex gap-2 ">Number : 01740228022 <LiaPhoneSolid className="mt-1" /> </h1>
             <h1 className="flex gap-2">email : ssar96540@gmail.com <HiOutlineMail className="mt-2" /> </h1>
             <h1 className="flex gap-2">Office : Dhaka,Narshingdi,Shibpur <SlLocationPin className="mt-1" /></h1>
             </div>
           </nav>
-          <div>
-            <h1 className="text-xl font-semibold ">Reach Us Here</h1>
-             
-            <p className="flex flex-col text-sm  text-[#8EA7E9]">Ready to get started? <br />Contact us today to learn more about how we  can help you<br /> with all of your real estate needs.  We look forward to the <br /> opportunity to work with you and exceed your expectations. <br /> <span className="fon-semibold text-lg">Thank you for choosing Sale~Home!</span></p>
-         
-          </div>
-     
         </div>
-        <aside className="bg-pink-400 py-5 text-center text-sm">
-          <p className="text-white text-lg">&copy; 2024 Sale ~ home. All Rights Reserved.</p>
-        </aside>
+        {/* <aside className="bg-pink-400 py-5 text-center text-sm"> */}
+         <div className="w-full justify-center items-center bg-gray-100  ">
+         <p className="  text-center bg-pi   border   container mx-auto  rounded-xl bg-pink-400  ">
+          <div className="text-white">
+          &copy; 2024 Tour ~ Hub. All Rights Reserved.
+          </div>
+         </p>
+         </div>
+        {/* </aside> */}
       </footer>
     </div>
     </div>
