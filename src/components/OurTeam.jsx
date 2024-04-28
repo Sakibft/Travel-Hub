@@ -10,7 +10,7 @@ const OurTeam = () => {
         <h1 className="text-center mt-16   text-4xl font-semibold">
           
           <span className="text-pink-400">O</span>ur
-          <span className="text-pink-400">T</span>am
+          <span className="text-pink-400">T</span>eam
         </h1>
         <div className=" border border-pink-400 w-20 "></div>
         <div className=" border border-pink-400 w-40 mt-1 mb-8"></div>

@@ -6,7 +6,7 @@ const CommonQuestion = () => {
       <div className="flex justify-center flex-col items-center">
         <h1 className="text-center mt-16   text-4xl font-semibold">
          
-          <span className="text-pink-400">C</span>ommon{" "}
+          <span className="text-pink-400">C</span>ommon
           <span className="text-pink-400">Q</span>uestion
         </h1>
         <div className=" border border-pink-400 w-20 "></div>

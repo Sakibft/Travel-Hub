@@ -6,7 +6,7 @@ import OurTeam from "../components/OurTeam";
 
 const Home = () => {
 const user = useLoaderData();
-const firstSixData = user.slice(0,6);
+const firstSixData = user.slice(0,8);
  
 console.log(user.length);
   return (
@@ -15,7 +15,7 @@ console.log(user.length);
      {/* Poplar */}
      <div>
      <div className="flex justify-center flex-col items-center">
-        <h1 className="text-center mt-16   text-4xl font-semibold"> <span className="text-pink-400">P</span>opular <span className="text-pink-400">D</span>estination</h1>
+        <h1 className="text-center mt-16   text-4xl font-semibold"> <span className="text-pink-400">P</span>opular<span className="text-pink-400">D</span>estination</h1>
         <div className=" border border-pink-400 w-20 ">
            </div>
         <div className=" border border-pink-400 w-40 mt-1 mb-8">
