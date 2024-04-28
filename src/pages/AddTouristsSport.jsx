@@ -136,7 +136,7 @@ const AddTouristsSport = () => {
                 </label>
                 <input
                  className="w-full px-4 py-3 rounded-md   border border-pink-400    "
-                  placeholder="Enter coffee details"
+                  placeholder=". total visitors per year "
                   type="text"
                   name="visitor"
                 />
@@ -145,7 +145,7 @@ const AddTouristsSport = () => {
                 </label>
                 <input
                 className="w-full px-4 py-3 rounded-md   border border-pink-400    "
-                  placeholder="Enter coffee details"
+                  placeholder="Enter  description"
                   type="text"
                   name="description"
                 />
