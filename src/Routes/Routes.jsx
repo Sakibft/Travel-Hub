@@ -71,7 +71,7 @@ const router = createBrowserRouter([
       {
         path:"/spacifik/:country",
         element:<Spacifik></Spacifik>,
-        loader:({params})=> fetch(`http://localhost:5000/countryes/${params.country}`)
+        loader:({params})=> fetch(`https://b9a10-server.vercel.app/countryes/${params.country}`)
       }
     ],
   },

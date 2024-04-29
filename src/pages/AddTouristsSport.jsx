@@ -51,7 +51,12 @@ const AddTouristsSport = () => {
     })
   };
   return (
-    <div className="container mx-auto mb-20 mt-5 border-2 border-pink-300 rounded-md">
+  <div>
+    <div>
+      <h1></h1>
+    </div>
+      <div className="container mx-auto mb-20 mt-5 border-2 border-pink-300 rounded-md">
+       
        <div><Toaster/></div>
  
       <div className="max-w-full mx-auto">
@@ -182,6 +187,7 @@ const AddTouristsSport = () => {
         </form>
       </div>
     </div>
+  </div>
   );
 };
 

@@ -1,37 +1,54 @@
 import { useLoaderData } from "react-router-dom";
 import SingleSpot from "../components/SingleSpot";
 import { RiArrowDropDownLine } from "react-icons/ri";
+import { useEffect, useState } from "react";
 
 const AllTouristsSport = () => {
-  const spots = useLoaderData();
-  console.log(spots);
+const spots = useLoaderData();
+const [sortBy, setSortBy] = useState([]);
+ 
+ useEffect(()=>{
+  setSortBy(spots)
+ },[])
+   const handleSort = sort => {
+    if(sort === 'ascending'){
+      const sortSpots = [...spots].sort((a, b) => parseFloat(a.cost) - parseFloat(b.cost));
+      setSortBy(sortSpots)
+
+
+      console.log('ascending');
+    }
+
+   else if(sort === 'descending'){
+    const sortSpots = [...spots].sort((a, b) => parseFloat(b.cost) - parseFloat(a.cost));
+    setSortBy(sortSpots)
+    console.log('descending');
+   }
+   }
+   
+ 
   return (
     <div>
        <div className="flex  justify-center items-center mt-4 w-full ">
           <details className="dropdown">
             <summary className="m-1 btn bg-pink-400 text-white">
-              Sort By <RiArrowDropDownLine className="text-3xl" />{" "}
+              Sort By <RiArrowDropDownLine className="text-3xl" />
             </summary>
             <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
-              <li>
-                <a>Chip to Primiyam </a>
+              <li onClick={()=> handleSort('ascending')}>
+                <a>Ascending</a>
               </li>
-              <li>
-                <a>Number of pages </a>
+              <li onClick={()=> handleSort('descending')}>
+                <a> descending </a>
               </li>
-              <li>
-                <a>Publisher year</a>
-              </li>
-              <li>
-                <a>Fiction</a>
-              </li>
+            
             </ul>
           </details>
         </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 justify-around gap-5 container mx-auto">
        
 
-        {spots.map((item) => (
+        {sortBy.map((item) => (
           <SingleSpot key={item._id} item={item}></SingleSpot>
         ))}
       </div>

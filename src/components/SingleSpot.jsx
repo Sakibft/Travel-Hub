@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const SingleSpot = ({item}) => {
   const {_id,photo,spot,cost,visitor,time,season}=item;
-  console.log(photo);
-  console.log(item);
+  // console.log(photo);
+  // console.log(item);
   return (
     <div>
     <div className="card   w-96 lg:w-full bg-base-100 shadow-xl">

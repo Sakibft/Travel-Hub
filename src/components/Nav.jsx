@@ -1,20 +1,38 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link, NavLink, Navigate } from "react-router-dom";
 import { UserContext } from "../ContextComponent/AuthContextComponent";
 import { Toaster } from "react-hot-toast";
-import { Tooltip } from "react-tooltip";
+ 
 import sdlk from "../../src/assets/dlk.avif";
 const Nav = () => {
   const { user, logOut } = useContext(UserContext);
   // console.log(user?.email);
   const [success, setSuccess] = useState();
   const [error, setError] = useState();
+  const[theme,setTheme]= useState('light');
+
+  useEffect(()=>{
+    localStorage.setItem('theme', theme)
+    const localTheme = localStorage.getItem('theme')
+    document.querySelector('html').setAttribute('data-theme',localTheme)
+  },[theme])
+
+  const handleToggle = e => {
+    if(e.target.checked){
+      setTheme('synthwave')
+    }
+    else{
+      setTheme('light')
+    }
+  }
+  console.log(theme);
   if (success) {
     // toast.success('Logout successfully');
     <Link to="/"></Link>;
   }
 
   const handleLogout = () => {
+
     console.log(user);
     logOut()
       .then((result) => {
@@ -167,8 +185,9 @@ const Nav = () => {
           )}
           <label className="cursor-pointer grid place-items-center">
             <input
+            onChange={handleToggle}
               type="checkbox"
-              value="synthwave"
+         
               className="toggle theme-controller bg-base-content row-start-1 col-start-1 col-span-2"
             />
             <svg
