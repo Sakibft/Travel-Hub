@@ -134,7 +134,7 @@ const Nav = () => {
               </li>
             </ul>
           </div>
-          <img src={sdlk} className="w-16" alt="" />
+          <img  src={sdlk} className="w-16 rounded-full" alt="" />
           <a className="  text-2xl font-bold ">
             Tour
             <span className="text-pink-400"> Hub </span>
