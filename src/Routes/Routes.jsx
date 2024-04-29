@@ -11,6 +11,7 @@ import PrivateAddToSpot from "../Private/PrivateAddToSpot";
 import MyListPrivate from "../Private/MyListPrivate";
 import ViewDetails from "../pages/ViewDetails";
 import Update from "../pages/Update";
+import Spacifik from "../components/Spacifik";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,11 @@ const router = createBrowserRouter([
         path:"/update/:id",
         element:<Update></Update>,
         loader:({params})=>fetch(`https://b9a10-server.vercel.app/spots/${params.id}`)
+      },
+      {
+        path:"/spacifik/:country",
+        element:<Spacifik></Spacifik>,
+        loader:({params})=> fetch(`http://localhost:5000/countryes/${params.country}`)
       }
     ],
   },

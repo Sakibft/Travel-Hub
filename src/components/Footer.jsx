@@ -12,10 +12,10 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 const Footer = () => {
   return (
     <div>
-         <div className="mt-20">
+         <div className="mt-20 ">
       {/* <hr className="border border-[#8EA7E9]" /> */}
       <footer className="flex flex-col text-black ">
-        <div className="flex flex-col items-center justify-around   bg-gray-100  md:flex-row md:gap-0 p-4">
+        <div className="flex flex-col items-center justify-around   bg-gray-100  md:flex-row md:gap-0 ">
           <aside className="flex items-center justify-center gap-3 text-xl mt-3 ">
             <div>
 
@@ -63,7 +63,7 @@ const Footer = () => {
           </nav>
         </div>
         {/* <aside className="bg-pink-400 py-5 text-center text-sm"> */}
-         <div className="w-full justify-center items-center bg-gray-100  ">
+         <div className="w-full justify-center items-center bg-gray-100 py-4 ">
          <p className="  text-center bg-pi   border   container mx-auto  rounded-xl bg-pink-400  ">
           <div className="text-white">
           &copy; 2024 Tour ~ Hub. All Rights Reserved.

@@ -22,10 +22,10 @@ const firstSixData = user.slice(0,8);
  },[])
 console.log(user.length);
   return (
-    <div className="container mx-auto">
+    <div>
      <Banner></Banner>
      {/* Poplar */}
-     <div>
+     <div className="container mx-auto">
      <div className="flex justify-center flex-col items-center">
         <h1 className="text-center mt-16   text-4xl font-semibold"> <span className="text-pink-400">P</span>opular<span className="text-pink-400">D</span>estination</h1>
         <div className=" border border-pink-400 w-20 ">
@@ -39,25 +39,41 @@ console.log(user.length);
      }
      </div>
      </div>
-     {/* Common question */}
-     <div>
-    <CommonQuestion></CommonQuestion>
-     </div>
-     {/* Our team */}
+     {/* <div className=" border border-pink-400 w-full mt-3 mb-8">
+           </div> */}
+        {/* Chose your dread country */}
+        <div>
       <div>
-     <OurTeam></OurTeam>
-      </div>
-      <div>
-      <div>
-        <h1 className="text-center text-2xl font-semibold mt-8 mb-4">Chose and Pick</h1>
-      </div>
+        <h1 className="text-center text-4xl font-semibold mt-20 mb-1"> <span className="text-pink-400">Chose</span> your dream  <span className="text-pink-400">Country</span> </h1>
+        <div className="w-full flex justify-center items-center">
 
-      <div className="grid md:grid-cols-2 gap-4  justify-around">
+        <div className=" border border-pink-400 w-60  mb-1">
+           </div>
+        </div>
+        <div className="w-full flex justify-center items-center">
+
+        <div className=" border border-pink-400 w-80 mb-8">
+           </div>
+        </div>
+      </div>
+<div className="bg-sky-100 p-2">
+
+      <div className="grid md:grid-cols-2 gap-2  justify-around  container mx-auto">
         {
           country && country.map(item => <Cntry key={item._id} item={item}></Cntry>)
         }
       </div>
+</div>
       </div>
+     {/* Common question */}
+     <div className="container mx-auto">
+    <CommonQuestion></CommonQuestion>
+     </div>
+     {/* Our team */}
+      <div className="container mx-auto">
+     <OurTeam></OurTeam>
+      </div>
+   
     </div>
   );
 };
