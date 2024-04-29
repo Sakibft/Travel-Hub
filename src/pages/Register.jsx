@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { UserContext } from "../ContextComponent/AuthContextComponent";
 import toast, { Toaster } from "react-hot-toast";
 import { refFromURL } from "firebase/database";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const {createUser, updateUserProfile }=useContext(UserContext)
@@ -50,6 +51,9 @@ const Register = () => {
   }
   return (
     <div>
+       <Helmet>
+        <title>Register</title>
+      </Helmet>
       <div><Toaster/></div>
       <div className="w-full max-w-md p-8 space-y-3 rounded-xl border bg-white border-pink-300  font-sans mx-auto mt-4 mb-10">
         <h1 className="text-3xl font-bold text-center  ">

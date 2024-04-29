@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { FaPen } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
 
 const MyList = () => {
   const { user } = useContext(UserContext);
@@ -51,6 +52,9 @@ const MyList = () => {
   };
   return (
     <div className="w-full flex flex-col justify-center items-center" >
+       <Helmet>
+        <title>My List</title>
+      </Helmet>
       <h1 className="text-center mb-2 text-2xl font-bold">My Collection</h1>
       <div className=" border border-pink-400 w-40">
            

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -59,6 +60,9 @@ const handleUpdate = e => {
 
   return (
     <div className="container mx-auto">
+       <Helmet>
+        <title>Update</title>
+      </Helmet>
       <h1> {user.country} </h1>
       <div className="max-w-full mx-auto">
         <form onSubmit={handleUpdate}  className="p-5">

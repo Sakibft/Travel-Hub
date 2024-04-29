@@ -1,4 +1,4 @@
-Web Name => Tour hub
+Web Name => Travel hub
 -----------------------
 category's name => Southeast Asia
 ------------------------------------------------

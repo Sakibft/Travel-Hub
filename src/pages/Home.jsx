@@ -6,6 +6,7 @@ import OurTeam from "../components/OurTeam";
 import { useEffect, useState } from "react";
 // import Country from "../components/Country";
 import Cntry from "./Cntry";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [country, setCountry]=useState();
@@ -23,6 +24,9 @@ const firstSixData = user.slice(0,8);
 console.log(user.length);
   return (
     <div>
+      <Helmet>
+        <title>Travel Hub</title>
+      </Helmet>
      <Banner></Banner>
      {/* Poplar */}
      <div className="container mx-auto">

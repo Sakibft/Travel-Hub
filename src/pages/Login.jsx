@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { UserContext } from "../ContextComponent/AuthContextComponent";
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
  
 
@@ -79,6 +80,9 @@ const handleGithub = () => {
 }
   return (
     <div>
+       <Helmet>
+        <title>Login</title>
+      </Helmet>
       <div><Toaster/></div>
        <div className="w-full max-w-md p-8 space-y-3 rounded-xl border border-pink-400 bg-white   font-sans mx-auto mt-20 mb-20">
         <h1 className="text-3xl font-bold text-center  ">Log<span className="text-pink-400">In</span></h1>

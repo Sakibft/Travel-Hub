@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { UserContext } from "../ContextComponent/AuthContextComponent";
+import { Helmet } from "react-helmet-async";
 
 const AddTouristsSport = () => {
   const {user} = useContext(UserContext)
@@ -52,6 +53,9 @@ const AddTouristsSport = () => {
   };
   return (
   <div>
+     <Helmet>
+        <title>Add Tourists Spot</title>
+      </Helmet>
     <div>
       <h1></h1>
     </div>

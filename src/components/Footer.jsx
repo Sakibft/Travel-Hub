@@ -66,7 +66,7 @@ const Footer = () => {
          <div className="w-full justify-center items-center bg-gray-100 py-2 ">
          <p className="  text-center bg-pi   border   container mx-auto  rounded-xl bg-pink-400  ">
           <div className="text-white">
-          &copy; 2024 Tour ~ Hub. All Rights Reserved.
+          &copy; 2024 Travel ~ Hub. All Rights Reserved.
           </div>
          </p>
          </div>

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
 
  
@@ -9,6 +10,9 @@ const ViewDetails = () => {
   console.log(user);
   return (
     <div className="container mx-auto">
+       <Helmet>
+        <title>View Details</title>
+      </Helmet>
     <div className="card card-side bg-base-100 shadow-xl">
   <figure><img src={photo} alt="Movie"/></figure>
   <div className="card-body">

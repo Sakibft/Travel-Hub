@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import SingleSpot from "../components/SingleSpot";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const AllTouristsSport = () => {
 const spots = useLoaderData();
@@ -29,6 +30,9 @@ const [sortBy, setSortBy] = useState([]);
  
   return (
     <div>
+       <Helmet>
+        <title>Al Tourists Spot</title>
+      </Helmet>
        <div className="flex  justify-center items-center mt-4 w-full ">
           <details className="dropdown">
             <summary className="m-1 btn bg-pink-400 text-white">
