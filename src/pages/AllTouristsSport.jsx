@@ -35,7 +35,7 @@ const [sortBy, setSortBy] = useState([]);
       </Helmet>
        <div className="flex  justify-center items-center mt-4 w-full ">
           <details className="dropdown">
-            <summary className="m-1 btn bg-pink-400 text-white">
+            <summary className="m-1 btn border-2 border-pink-400 text-pink-400 hover:bg-pink-400 text-2xl mb-4 hover:text-white">
               Sort By <RiArrowDropDownLine className="text-3xl" />
             </summary>
             <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">

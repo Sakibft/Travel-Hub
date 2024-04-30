@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Typewriter } from "react-simple-typewriter";
 
 const Cntry = ({ item }) => {
   const { country, image, description } = item;
@@ -11,7 +12,29 @@ const Cntry = ({ item }) => {
               <img className="w-96 h-80 rounded-xl" src={image} alt="Movie" />
             </figure>
             <div className="card-body  lg:w-[50%]">
-              <h2 className="card-title">Country : {country}</h2>
+              <h2 className="card-title">
+          
+
+           
+              Country :
+        <span >
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={[country]}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+        </span>
+   
+
+
+
+              </h2>
               <p>
               
                 <span className="font-semibold "> Description : </span> 

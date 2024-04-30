@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 // import Country from "../components/Country";
 import Cntry from "./Cntry";
 import { Helmet } from "react-helmet-async";
+import { Typewriter } from "react-simple-typewriter";
 
 const Home = () => {
   const [country, setCountry]=useState();
@@ -48,7 +49,28 @@ console.log(user.length);
         {/* Chose your dread country */}
         <div>
       <div>
-        <h1 className="text-center text-4xl font-semibold mt-20 mb-1"> <span className="text-pink-400">Chose</span> your dream  <span className="text-pink-400">Country</span> </h1>
+        <h1 className="text-center text-4xl font-semibold mt-20 mb-1"> 
+    
+        
+        
+        
+        
+        <span className="text-pink-400">Chose</span> your dream  <span className="text-pink-400">
+          
+        <span  className="text-center text-4xl font-semibold  ">
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={[' Country']}
+            loop={1}
+            cursor
+            cursorStyle='|'
+            typeSpeed={120}
+            deleteSpeed={100}
+            delaySpeed={2000}
+          
+          />
+        </span>
+          </span> </h1>
         <div className="w-full flex justify-center items-center">
 
         <div className=" border border-pink-400 w-60  mb-1">

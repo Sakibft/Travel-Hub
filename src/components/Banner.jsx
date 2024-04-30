@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 import "../../src/App.css";
+import { Typewriter } from "react-simple-typewriter";
 // import { Pagination, Navigation } from 'swiper/modules';
 const Banner = () => {
   return (
@@ -31,8 +32,25 @@ const Banner = () => {
           <div className="slide slide1">
             <div>
               <h1 className="text-white text-center md:text-4xl text-2xl font-bold">
-                Discover information about a potential new country <br />  and Next
-                toured the country
+             
+               
+
+                <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'bold' }}>
+                Discover information about a potential new country <br />  and 
+        <span  className="font-bold text-pink-400">
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={[ ' Next  toured the country']}
+            loop={true}
+            cursor
+            cursorStyle='_'
+            typeSpeed={140}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+        </span>
+      </h1>
               </h1>
               <div className="w-full flex justify-center items-center mt-4">
                 <label className="input input-bordered flex rounded-full justify-between items-center gap-2 border-2 hover:border-[#8EA7FF] ">
