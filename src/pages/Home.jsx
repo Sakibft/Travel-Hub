@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import Cntry from "./Cntry";
 import { Helmet } from "react-helmet-async";
 import { Typewriter } from "react-simple-typewriter";
-
+import { Fade } from "react-awesome-reveal";
 const Home = () => {
   const [country, setCountry]=useState();
   console.log(country);
@@ -32,7 +32,12 @@ console.log(user.length);
      {/* Poplar */}
      <div className="container mx-auto">
      <div className="flex justify-center flex-col items-center">
+      <Fade
+      delay={300}
+      >
+
         <h1 className="text-center mt-16   text-4xl font-semibold"> <span className="text-pink-400">P</span>opular<span className="text-pink-400">D</span>estination</h1>
+      </Fade>
         <div className=" border border-pink-400 w-20 ">
            </div>
         <div className=" border border-pink-400 w-40 mt-1 mb-8">

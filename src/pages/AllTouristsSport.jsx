@@ -33,7 +33,7 @@ const [sortBy, setSortBy] = useState([]);
        <Helmet>
         <title>Al Tourists Spot</title>
       </Helmet>
-       <div className="flex  justify-center items-center mt-4 w-full ">
+       <div className="flex  mt-4 w-full justify-center ">
           <details className="dropdown">
             <summary className="m-1 btn border-2 border-pink-400 text-pink-400 hover:bg-pink-400 text-2xl mb-4 hover:text-white">
               Sort By <RiArrowDropDownLine className="text-3xl" />

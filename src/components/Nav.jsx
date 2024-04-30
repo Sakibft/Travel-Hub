@@ -195,7 +195,7 @@ const Nav = () => {
               </div>
               <ul
                 tabIndex={0}
-                className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52 ml=40"
+                className="dropdown-content z-[10] menu p-2 shadow bg-base-100 rounded-box w-52  right-0 "
               >
                 <li className="border border-pink-400 rounded-md bg-white text-black  hover:bg-pink-400 hover:text-white">
                   <a>{user?.displayName}</a>
