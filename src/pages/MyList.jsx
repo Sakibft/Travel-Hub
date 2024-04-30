@@ -70,7 +70,7 @@ const MyList = () => {
               <tr className="border rounded-xl border-b-pink-400">
                 <th>Image</th>
                 <th>Details</th>
-                <th>Update</th>
+               
                 <th>Action</th>
               </tr>
             </thead>
@@ -108,13 +108,12 @@ const MyList = () => {
                         Update <FaPen />
                       </button>
                       </Link>
-                    </td>
-                    <th>
-                      <button onClick={()=> handleDelete(item._id)} className="border flex gap-2 py-1 px-2  text-pink-400  font-semibold rounded-md border-pink-400">
+                      <button onClick={()=> handleDelete(item._id)} className="border flex gap-2 py-1 px-2  text-pink-400  font-semibold rounded-md border-pink-400 mt-2">
                         Delete
                         <MdDelete />
                       </button>
-                    </th>
+                    </td>
+                    
                   </tr>
                 ))}
             </tbody>
