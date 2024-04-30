@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { BiPhoneCall } from "react-icons/bi";
 import { useLoaderData } from "react-router-dom";
 
 const ViewDetails = () => {
@@ -22,8 +23,8 @@ const ViewDetails = () => {
       <Helmet>
         <title>View Details</title>
       </Helmet>
-      <div className="card md:card-side bg-base-100 shadow-xl lg:h-96">
-        <figure className="border border-red-500 w-full">
+      <div className="card md:card-side bg-base-100 shadow-xl lg:h-96 border-2 border-y-pink-400">
+        <figure className="   w-full">
           <img src={photo} alt="Movie" />
         </figure>
         <div className="  pl-5 flex flex-col justify-center gap-y-1 ">
@@ -62,8 +63,12 @@ const ViewDetails = () => {
             </span>{" "}
           </p>
 
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Watch</button>
+          <div className="card-actions justify-center">
+          <button className="btn text-white bg-pink-400 ">
+              Contact Now 
+              <BiPhoneCall className="font-bold text-xl" />
+
+            </button>
           </div>
         </div>
       </div>

@@ -49,12 +49,12 @@ const Nav = () => {
   };
   // console.log(user);
   const LItem = (
-    <div className="space-x-6">
+    <div className="space-x-8">
       <NavLink
         to="/"
         className={({ isActive }) =>
           isActive
-            ? "lg:px-2 py-1 border-2 text-pink-400 border-pink-400 rounded-md p-3  font-semibold text-2xl  "
+            ? "lg:px-2 py-1 border text-pink-400 border-x-pink-400 rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
       >
@@ -64,7 +64,7 @@ const Nav = () => {
         to="/allTouristsSpot"
         className={({ isActive }) =>
           isActive
-            ? "lg:px-2 py-1 border-2 text-pink-400 border-pink-400 rounded-md p-3  font-semibold text-2xl  "
+            ? "lg:px-2 py-1 border-2 text-pink-400 border-x-pink-400 rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
       >
@@ -74,7 +74,7 @@ const Nav = () => {
         to="/addTouristsSpot"
         className={({ isActive }) =>
           isActive
-            ? "lg:px-2 py-1 border-2 text-pink-400 border-pink-400 rounded-md p-3  font-semibold text-2xl  "
+            ? "lg:px-2 py-1 border-2 text-pink-400 border-x-pink-400 rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
       >
@@ -84,7 +84,7 @@ const Nav = () => {
         to="/myList"
         className={({ isActive }) =>
           isActive
-            ? "lg:px-2 py-1 border-2 text-pink-400 border-pink-400 rounded-md p-3  font-semibold text-2xl  "
+            ? "lg:px-2 py-1 border-2 text-pink-400 border-x-pink-400 rounded-md p-3  font-semibold text-2xl  "
             : "font-semibold text-2xl  "
         }
       >

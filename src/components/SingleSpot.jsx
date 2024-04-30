@@ -8,7 +8,7 @@ const SingleSpot = ({item}) => {
   // console.log(item);
   return (
     <div>
-    <div className="card   w-96 lg:w-full bg-base-100 shadow-xl">
+    <div className="card   w-96 lg:w-full bg-base-100 shadow-xl transition duration-300 transform hover:scale-105  border-2 hover:border-pink-400">
   <figure><img className="h-60 rounded-md" src={photo} alt="Shoes" /></figure>
   <div className="p-3">
     
