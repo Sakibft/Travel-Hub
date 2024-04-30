@@ -4,8 +4,8 @@ const TouristsSpots = ({ item }) => {
   const { _id, photo, spot, cost, visitor, time, season } = item;
   return (
     <div>
-      <div>
-        <div className="card   w-96 lg:w-full bg-base-100 shadow-xl">
+      <div> 
+        <div className="card   w-96 lg:w-full bg-base-100 shadow-xl transition duration-300 transform hover:scale-105 border-2 hover:border-pink-400">
       
           <figure>
             <img className="h-60 rounded-md" src={photo} alt="Shoes" />

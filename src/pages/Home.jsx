@@ -37,7 +37,7 @@ console.log(user.length);
         <div className=" border border-pink-400 w-40 mt-1 mb-8">
            </div>
       </div>
-     <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5  justify-around">
+     <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-5  justify-around ">
      {
       firstSixData.map((item) => <TouristsSpots key={item._id} item={item}></TouristsSpots>)
      }
@@ -62,7 +62,7 @@ console.log(user.length);
       </div>
 <div className="bg-sky-100 p-2">
 
-      <div className="grid md:grid-cols-2 gap-2  justify-around  container mx-auto">
+      <div className="grid md:grid-cols-2 gap-5  justify-around  container mx-auto">
         {
           country && country.map(item => <Cntry key={item._id} item={item}></Cntry>)
         }

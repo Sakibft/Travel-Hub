@@ -65,7 +65,11 @@ const router = createBrowserRouter([
       },
       {
         path:"/update/:id",
-        element:<Update></Update>,
+        element:
+        <MyListPrivate>
+
+          <Update></Update>
+        </MyListPrivate>,
         loader:({params})=>fetch(`https://b9a10-server.vercel.app/spots/${params.id}`)
       },
       {

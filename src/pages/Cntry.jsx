@@ -6,7 +6,7 @@ const Cntry = ({ item }) => {
     <Link to={`/spacifik/${country}`}>
       <div>
         <div className="lg:w-full w-96">
-          <div className=" bg-base-100 shadow-xl  lg:flex justify-center items-center rounded-xl">
+          <div className=" bg-base-100 shadow-xl  lg:flex justify-center items-center rounded-xl transition duration-300 transform hover:scale-105 border-2 hover:border-y-pink-400">
             <figure className=" lg:w-[50%] ">
               <img className="w-96 h-80 rounded-xl" src={image} alt="Movie" />
             </figure>
